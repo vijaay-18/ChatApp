@@ -8,6 +8,7 @@ const Conversations = () => {
     <div className="py-2 flex flex-col overflow-auto">
       {conversations.map((conversation, idx) => (
         <Conversation
+          emoji={getRandomEmoji()}
           key={conversation._id}
           conversation={conversation}
           lastIdx={idx === conversations.length - 1}
